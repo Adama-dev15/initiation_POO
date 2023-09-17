@@ -21,10 +21,10 @@ class Personne{
     public function getAge(){
         return $this->age;
     }
-
-    class Employe extends Personne{
-        private $salaire;
-    }
+}
+class Employe extends Personne{
+    private $salaire;
+    
     public function __construct($nom, $age, $salaire) {
         parent::__construct($nom, $age);
         $this->salaire = $salaire;
@@ -33,7 +33,6 @@ class Personne{
     public function getSalaire() {
         return $this->salaire;
     }
-
 }
     $employe = new Employe();
     $employe->affichierDetails();

@@ -5,9 +5,16 @@ class Personne{
     public $age;
 
     // Méthodes
-    public function presenter() {
+    public function affichierDetails() {
         echo "je m'appelle Adama et j'ai 30 ans.";
     }
+
+    public function __construct($nom, $age){
+        $this->nom = $nom;
+        $this->age = $age;
+    }
+
 }
     $personne = new Personne();
+    $personne->affichierDetails();
 ?>

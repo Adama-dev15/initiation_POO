@@ -1,8 +1,8 @@
 <?php 
 class Personne{
     // proprietes
-    public $nom;
-    public $age;
+    private $nom;
+    private $age;
 
     // Méthodes
     public function affichierDetails() {
@@ -17,11 +17,27 @@ class Personne{
     public function getNom(){
         return $this->nom;
     }
+
     public function getAge(){
         return $this->age;
     }
 
+    class Employe extends Personne{
+        private $salaire;
+    }
+    public function __construct($nom, $age, $salaire) {
+        parent::__construct($nom, $age);
+        $this->salaire = $salaire;
+    }
+
+    public function getSalaire() {
+        return $this->salaire;
+    }
+
 }
-    $personne = new Personne();
-    $personne->affichierDetails();
+    $employe = new Employe();
+    $employe->affichierDetails();
+    $employe->getNom();
+    $employe->getAge();
+    $employe->getSalaire();
 ?>

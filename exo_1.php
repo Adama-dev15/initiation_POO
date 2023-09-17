@@ -14,6 +14,13 @@ class Personne{
         $this->age = $age;
     }
 
+    public function getNom(){
+        return $this->nom;
+    }
+    public function getAge(){
+        return $this->age;
+    }
+
 }
     $personne = new Personne();
     $personne->affichierDetails();

@@ -9,4 +9,5 @@ class Personne{
         echo "je m'appelle Adama et j'ai 30 ans.";
     }
 }
+    $personne = new Personne();
 ?>
